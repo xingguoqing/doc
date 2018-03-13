@@ -1,0 +1,208 @@
+<!DOCTYPE html><html><head><title>商品分类相关OpenAPI</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="商品分类相关openapi">商品分类相关OpenAPI</h1>
+
+<blockquote>
+  <p><strong>修改历史</strong></p>
+  
+  <table><tbody><tr style="font-weight:bold">  <td align="left">版本号</td>  <td align="left">变更日期</td>  <td align="left">变更内容</td>  <td align="center">变更人</td>  <td align="center">批准</td></tr><tr>  <td align="left">V0.01</td>  <td align="left">2018-03-13</td>  <td align="left">创建</td>  <td align="center">邢国庆</td>  <td align="center"></td></tr></tbody></table>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><strong>说明</strong> <br>
+  所有接口均采用JSON格式（UTF-8）交换数据。接口描述中&lt;&gt;（尖括号）表示占位符，需要替换为真实内容。查询采用采用不定数目的大写字母X表示。 <br>
+  <code>&lt;HOST&gt;</code>：服务的ip地址或者域名 <br>
+  <code>&lt;PORT&gt;</code>：端口</p>
+</blockquote>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><a href="#商品分类相关openapi">商品分类相关OpenAPI</a><ul>
+<li><a href="#1分页查询商品分类">1、分页查询商品分类</a><ul>
+<li><a href="#url">URL</a></li>
+<li><a href="#请求体">请求体</a><ul>
+<li><a href="#请求体说明">请求体说明</a></li>
+</ul>
+</li>
+<li><a href="#返回值">返回值</a><ul>
+<li><a href="#返回值说明">返回值说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2添加商品分类">2、添加商品分类</a><ul>
+<li><a href="#url-1">URL</a></li>
+<li><a href="#请求体-1">请求体</a><ul>
+<li><a href="#请求体说明-1">请求体说明</a></li>
+</ul>
+</li>
+<li><a href="#返回值-1">返回值</a><ul>
+<li><a href="#返回值说明-1">返回值说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#附录">附录</a><ul>
+<li><a href="#状态码">状态码</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h2 id="1分页查询商品分类">1、分页查询商品分类</h2>
+
+
+
+<h3 id="url">URL</h3>
+
+<blockquote>
+  <p>GET <br>
+   http://:/goodsType/selPageGoodsType?page=1&amp;rows=10&amp;keyword=品</p>
+</blockquote>
+
+
+
+<hr>
+
+
+
+<h3 id="请求体">请求体</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line"><wbr>
+</div></code></pre>
+
+
+
+<h4 id="请求体说明">请求体说明</h4>
+
+<blockquote>
+  <table><tbody><tr style="font-weight:bold">  <td align="left">参数</td>  <td>类型</td>  <td align="center">长度</td>  <td align="center">是否必填</td>  <td align="center">默认值</td>  <td align="left">描述</td>  <td align="left">说明</td></tr><tr>  <td align="left">page</td>  <td>int</td>  <td align="center"></td>  <td align="center">是</td>  <td align="center"></td>  <td align="left">当前页</td>  <td align="left"></td></tr><tr>  <td align="left">rows</td>  <td>int</td>  <td align="center"></td>  <td align="center">是</td>  <td align="center"></td>  <td align="left">每页显示的记录数</td>  <td align="left"></td></tr><tr>  <td align="left">keyword</td>  <td>String</td>  <td align="center"></td>  <td align="center">否</td>  <td align="center"></td>  <td align="left">模糊查询商品分类名称</td>  <td align="left"></td></tr></tbody></table>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="返回值">返回值</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">{
+</div><div class="hljs-line">    <span class="hljs-attr">"code"</span>: <span class="hljs-string">"0000"</span>,
+</div><div class="hljs-line">    <span class="hljs-attr">"msg"</span>: <span class="hljs-string">"操作成功"</span>,
+</div><div class="hljs-line">    <span class="hljs-attr">"datas"</span>: {
+</div><div class="hljs-line">        <span class="hljs-attr">"total"</span>: <span class="hljs-number">6</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">"rows"</span>: [
+</div><div class="hljs-line">            {
+</div><div class="hljs-line">                <span class="hljs-attr">"id"</span>: <span class="hljs-number">6</span>,
+</div><div class="hljs-line">                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"办公用品"</span>
+</div><div class="hljs-line">            },
+</div><div class="hljs-line">            {
+</div><div class="hljs-line">                <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+</div><div class="hljs-line">                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"化妆品"</span>
+</div><div class="hljs-line">            },
+</div><div class="hljs-line">            {
+</div><div class="hljs-line">                <span class="hljs-attr">"id"</span>: <span class="hljs-number">5</span>,
+</div><div class="hljs-line">                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"厨房用品"</span>
+</div><div class="hljs-line">            },
+</div><div class="hljs-line">            {
+</div><div class="hljs-line">                <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+</div><div class="hljs-line">                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"床上用品"</span>
+</div><div class="hljs-line">            },
+</div><div class="hljs-line">            {
+</div><div class="hljs-line">                <span class="hljs-attr">"id"</span>: <span class="hljs-number">3</span>,
+</div><div class="hljs-line">                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"母婴用品"</span>
+</div><div class="hljs-line">            },
+</div><div class="hljs-line">            {
+</div><div class="hljs-line">                <span class="hljs-attr">"id"</span>: <span class="hljs-number">4</span>,
+</div><div class="hljs-line">                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"电子产品"</span>
+</div><div class="hljs-line">            }
+</div><div class="hljs-line">        ]
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h4 id="返回值说明">返回值说明</h4>
+
+<blockquote>
+  <table><tbody><tr style="font-weight:bold">  <td align="left">参数</td>  <td>类型</td>  <td align="left">描述</td>  <td align="left">说明</td></tr><tr>  <td align="left">code</td>  <td>String</td>  <td align="left">状态码</td>  <td align="left">0000-操作成功;1004-账号已经存在;<a href="#状态码">详见状态码说明</a></td></tr><tr>  <td align="left">msg</td>  <td>String</td>  <td align="left">信息说明</td>  <td align="left"></td></tr><tr>  <td align="left">datas</td>  <td>String</td>  <td align="left">返回信息</td>  <td align="left"></td></tr><tr>  <td align="left">total</td>  <td>long</td>  <td align="left">总记录数</td>  <td align="left"></td></tr><tr>  <td align="left">id</td>  <td>long</td>  <td align="left">分类id</td>  <td align="left"></td></tr><tr>  <td align="left">name</td>  <td>String</td>  <td align="left">分类名称</td>  <td align="left"></td></tr></tbody></table>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="2添加商品分类">2、添加商品分类</h2>
+
+<h3 id="url-1">URL</h3>
+
+<blockquote>
+  <p>GET <br>
+   http://:/goodsType/addGoodsType?typeName=化妆品</p>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="请求体-1">请求体</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line"><wbr>
+</div></code></pre>
+
+
+
+<h4 id="请求体说明-1">请求体说明</h4>
+
+<blockquote>
+  <table><tbody><tr style="font-weight:bold">  <td align="left">参数</td>  <td>类型</td>  <td align="center">长度</td>  <td align="center">是否必填</td>  <td align="center">默认值</td>  <td align="left">描述</td>  <td align="left">说明</td></tr><tr>  <td align="left">typeName</td>  <td>String</td>  <td align="center"></td>  <td align="center">是</td>  <td align="center"></td>  <td align="left">分类名称</td>  <td align="left"></td></tr></tbody></table>
+</blockquote>
+
+<hr>
+
+<h3 id="返回值-1">返回值</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-json hljs"><div class="hljs-line">{
+</div><div class="hljs-line">    <span class="hljs-attr">"code"</span>: <span class="hljs-string">"0000"</span>,
+</div><div class="hljs-line">    <span class="hljs-attr">"msg"</span>: <span class="hljs-string">"操作成功"</span>,
+</div><div class="hljs-line">    <span class="hljs-attr">"datas"</span>: <span class="hljs-literal">null</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<h4 id="返回值说明-1">返回值说明</h4>
+
+<blockquote>
+  <table><tbody><tr style="font-weight:bold">  <td align="left">参数</td>  <td>类型</td>  <td align="left">描述</td>  <td align="left">说明</td></tr><tr>  <td align="left">code</td>  <td>String</td>  <td align="left">状态码</td>  <td align="left">0000-操作成功;1004-账号已经存在;<a href="#状态码">详见状态码说明</a></td></tr><tr>  <td align="left">msg</td>  <td>String</td>  <td align="left">信息说明</td>  <td align="left"></td></tr><tr>  <td align="left">datas</td>  <td>String</td>  <td align="left">返回信息</td>  <td align="left"></td></tr></tbody></table>
+</blockquote>
+
+<hr>
+
+<h2 id="附录">附录</h2>
+
+
+
+<h3 id="状态码">状态码</h3>
+
+<blockquote>
+  <table><tbody><tr style="font-weight:bold">  <td align="left">状态码</td>  <td>说明</td></tr><tr>  <td align="left">0000</td>  <td>操作成功</td></tr></tbody></table>
+</blockquote></div></body></html>
